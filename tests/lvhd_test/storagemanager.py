@@ -851,7 +851,7 @@ class StorageManagerCLI(StorageManager):
 
     def _getThisHost(self):
         uuid = None
-        f = open("/etc/xensource-inventory", 'r')
+        f = open("/etc/xcp/inventory", 'r')
         for line in f.readlines():
             if line.startswith("INSTALLATION_UUID"):
                 uuid = line.split("'")[1]
@@ -860,7 +860,7 @@ class StorageManagerCLI(StorageManager):
 
     def _getThisDom0(self):
         uuid = None
-        f = open("/etc/xensource-inventory", 'r')
+        f = open("/etc/xcp/inventory", 'r')
         for line in f.readlines():
             if line.startswith("CONTROL_DOMAIN_UUID"):
                 uuid = line.split("'")[1]

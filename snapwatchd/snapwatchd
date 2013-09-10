@@ -173,7 +173,7 @@ def _getSnapUUIDlist(h,uuid):
     return vdi_uuids
 
 def get_dom0_uuid():
-    filename = '/etc/xensource-inventory'
+    filename = '/etc/xcp/inventory'
     try:
         f = open(filename, 'r')
     except:

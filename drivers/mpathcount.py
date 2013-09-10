@@ -87,7 +87,7 @@ def match_host_id(s):
     return regex.search(s, 0)
 
 def get_localhost_uuid():
-    filename = '/etc/xensource-inventory'
+    filename = '/etc/xcp/inventory'
     try:
         f = open(filename, 'r')
     except:
