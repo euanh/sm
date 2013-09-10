@@ -532,7 +532,7 @@ def match_rootdev(s):
     return regex.search(s, 0)
 
 def getrootdev():
-    filename = '/etc/xensource-inventory'
+    filename = '/etc/xcp/inventory'
     try:
         f = open(filename, 'r')
     except:
@@ -571,7 +571,7 @@ def get_localAPI_session():
 
 def get_this_host():
     uuid = None
-    f = open("/etc/xensource-inventory", 'r')
+    f = open("/etc/xcp/inventory", 'r')
     for line in f.readlines():
         if line.startswith("INSTALLATION_UUID"):
             uuid = line.split("'")[1]
@@ -580,7 +580,7 @@ def get_this_host():
 
 # XXX: this function doesn't do what it claims to do
 def get_localhost_uuid(session):
-    filename = '/etc/xensource-inventory'
+    filename = '/etc/xcp/inventory'
     try:
         f = open(filename, 'r')
     except:
