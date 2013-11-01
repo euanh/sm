@@ -32,6 +32,8 @@ PREFIX_LEN = 4
 SUFFIX_LEN = 12
 SECTOR_SHIFT = 9
 
+os.environ['PATH'] = ':'.join([os.getenv('PATH'), "/lib/udev"])
+
 def gen_hash(st, len):
     hs = 0
     for i in st:
